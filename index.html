@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-secondary">
+
+    <section class="mt-5">
+        <div class="cont bg-white rounded-4 p-4 shadow-lg mx-auto">
+            <div class="row">
+                <div class="col-12 w-100">
+                    <h1 class="text-center">Cruds system</h1>
+
+
+                    <div class="my-2">
+                        <label class="fs-4" for="productNameInput">Proudct Name:</label>
+                        <input oninput="valdaitionName()" type="text" id="productNameInput" class="form-control">
+
+                        <div id="valdaitionNameMassage" class="alert alert-success mt-2 d-none">Please Enter First World [A-Z] Then [a-z]{4,8}</div>
+                    </div>
+
+
+                    <div class="my-2">
+                        <label class="fs-4" for="productPriceInput">Proudct price:</label>
+                        <input oninput="valdaitionPrice()" type="number" id="productPriceInput" class="form-control">
+                        <div id="valdaitionPriceMassage" class="alert alert-success mt-2 d-none">Please Enter Numbers {4,8} Take Care Start With any Number Until Zero</div>
+                    </div>
+
+                    <div class="my-2">
+                        <label class="fs-4" for="productCategoryInput">Proudct category:</label>
+                        <input oninput="valdaitionCategory()" type="text" id="productCategoryInput" class="form-control">
+                        <div id="valdaitionCategoryMassage" class="alert alert-success d-none">Please Enter Category</div>
+                    </div>
+
+
+                    <div class="my-2">
+                        <label class="fs-4" for="productDescriptionInput">Proudct description:</label>
+                        <textarea oninput="valdaitionDes()" type="text" id="productDescriptionInput" class="form-control"></textarea>
+                        <div  id="valdaitionDescriptionMassage" class="alert alert-success d-none">Please Enter Category</div>
+                    </div>
+
+
+                    <div class="d-flex gap-3">
+                        <button onclick="productAdd()" class="btn btn-success my-2 w-50 d-block" id="productAdd">Add Proudct</button>
+                        <button onclick = "btnUpdate()"  class="btn btn-warning my-2 w-50 d-none" id="productUpdate">Update Proudct</button>
+                        <button onclick="removeProduct()" class="btn btn-danger my-2 w-50">Clear</button>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <div class="mt-3 ">
+        <input id="searchInput" oninput="search()" class="w-50 form-control mx-auto" type="search" placeholder="Search By Name">
+    </div>
+
+
+
+
+
+    <div class="d-flex justify-content-center align-items-center text-center ">
+        <div class="w-75">
+            <table class="table table-dark mt-3 table-bordered">
+                <thead>
+                    <tr class="fs-5">
+                        <th class="text-danger" scope="col">Id</th>
+                        <th class="text-danger" scope="col">Name</th>
+                        <th class="text-danger" scope="col">Price</th>
+                        <th class="text-danger" scope="col">Category</th>
+                        <th class="text-danger" scope="col">Description</th>
+                        <th class="text-danger" scope="col">Update</th>
+                        <th class="text-danger" scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tabel-tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
