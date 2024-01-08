@@ -40,7 +40,7 @@ if(valdaitionName() == true && valdaitionPrice()== true &&valdaitionCategory()==
 
     showData();
 
-    // removeProduct();
+    removeProduct();
 
     console.log(proudctData);
 }
@@ -135,7 +135,7 @@ function btnUpdate() {
 
 function valdaitionName() {
     productNameInput.value;
-    var regexName = /^[A-Z][a-z]{4,8}$/;
+    var regexName = /^[A-Z][a-z]{3,15}$/;
     if (regexName.test(productNameInput.value) == true) {
         productNameInput.classList.add("is-valid");
         productNameInput.classList.remove("is-invalid");
@@ -154,7 +154,7 @@ function valdaitionName() {
 
 function valdaitionPrice() {
     productPriceInput.value;
-    var regexPrice = /^[0-9]{4,8}$/;
+    var regexPrice = /^[0-9]{3,15}$/;
     if (regexPrice.test(productPriceInput.value) == true) {
         productPriceInput.classList.add("is-valid");
         productPriceInput.classList.remove("is-invalid");
@@ -193,7 +193,8 @@ function valdaitionCategory(){
 
 function valdaitionDes(){
     productDescriptionInput.value;
-    var regexDescription = /^[a-zA-Z]{0,150}$/;
+    var regexDescription = /^[a-zA-Z\s]{0,150}$/;
+
     
     if(regexDescription.test(productDescriptionInput.value)){
         productDescriptionInput.classList.add("is-valid");
