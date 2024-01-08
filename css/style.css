@@ -9,10 +9,23 @@
     width: 90%;
 }
 
-/* @media screen and (min-width:0px)and (max-width:567px) {
-    .table {
-        width: 10% !important;
+
+
+@media screen and (min-width:0px)and (max-width:567px) {
+.container {
+    width: 100%;
+    margin: auto;
+}
+thead tr th{
+font-size: 10px !important;
+}
+}
+@media screen and (min-width:568px)and (max-width:765px) {
+    .container {
+        width: 100%;
         margin: auto;
-        background-color: aquamarine;
     }
-} */
+    thead tr th{
+    font-size: 15px !important;
+    }
+    }
